@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- meta gsignin -->
+    <meta name="google-signin-client_id" content="973708647973-3nbrjai53jtbh3r5hmrtr40djg7pttao.apps.googleusercontent.com">
+
+        <!-- tailwind -->
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="icon" href="/src/assets/kanban2.png" style="border-radius: 50%;">
+
+    <title>Kanbanoogle</title>
+
+    <style>
+        .addP {
+            background-color: black;
+        }
+        .fontUser{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            border: crimson;
+        }
+        .pressDown {
+            background-color: #5778f3;
+            padding: 10px 30px;
+            color: #fff;
+            border-radius: 5px;
+            border-bottom: 4px solid #3e4baf;
+            transition: 0.1s;
+        }
+        .pressDown:hover {
+            border-bottom-width: 0;
+            margin-top: 3.5px;
+        }
+        .pressDownG {
+            background-color: #3ab12f;
+            padding: 10px 30px;
+            color: #fff;
+            border-radius: 5px;
+            border-bottom: 4px solid #2e8d26;
+            transition: 0.1s;
+        }
+        .pressDownG:hover {
+            border-bottom-width: 0;
+            margin-top: 3.5px;
+        }
+
+        .pressDownAdd {
+            background-color: #3ab12f;
+            padding: 5px 30px;
+            color: #fff;
+            border-radius: 5px;
+            border-bottom: 4px solid #2e8d26;
+            transition: 0.1s;
+            /* height: 38px; */
+        }
+        .pressDownAdd:hover {
+            /* height: 38px; */
+            border-bottom-width: 0;
+            margin-top: 5px;
+        }
+
+        .pressDownAbu {
+            background-color: #ffd506;
+            padding: 10px 30px;
+            color: #fff;
+            border-radius: 5px;
+            border-bottom: 4px solid #bebe08;
+            transition: 0.1s;
+        }
+        .pressDownAbu:hover {
+            border-bottom-width: 0;
+            margin-top: 3.5px;
+        }
+
+        .pressDownR {
+            background-color: crimson;
+            padding: 10px 30px;
+            color: #fff;
+            border-radius: 5px;
+            border-bottom: 4px solid rgb(163, 18, 47);
+            transition: 0.1s;
+        }
+        .pressDownR:hover {
+            border-bottom-width: 0;
+            margin-top: 3.5px;
+        }
+        .contain {
+            /* max-height: 200vh; */
+            max-height: 96vh;
+            overflow-y: scroll;
+            /* transition: 0.5s; */
+        }
+        .task {
+            width: 90%;
+            height: auto;
+        }
+        .content-box {
+            height: 350px;
+            margin-bottom: 10px;
+        }
+        .category{
+            /* border-radius: 200px; */
+            transition: 0.4s;
+            /* box-shadow: black; */
+        }
+        .category:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+        .tradeM{
+            font-size: small;
+            color: gray;
+        }
+
+        /* .bl {
+           background-color: crimson;
+        }
+        .td {
+            background-color: rgb(206, 206, 7);
+        }
+        .dg {
+            background-color: green;
+        }
+        .cp {
+            background-color: royalblue;
+        } */
+
+    </style>
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="position: fixed; bottom:96;width: 100%; z-index:-1;"><path fill="#f3f4f5" fill-opacity="1" d="M0,32L120,58.7C240,85,480,139,720,133.3C960,128,1200,64,1320,32L1440,0L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="position: fixed; bottom:0;width: 100%; z-index:-1;"><path fill="#f3f4f5" fill-opacity="1" d="M0,160L120,176C240,192,480,224,720,224C960,224,1200,192,1320,176L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+    
+    <div id="app">
+    </div>
+    
+    <!-- script apis.google 1 -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <!-- sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <!-- fontawesome -->
+    <script src="https://use.fontawesome.com/4e9e149544.js"></script>
+
+    <!-- SCRIPT MAIN -->
+    <script src="/src/main.js"></script>
+
+</body>
+
+</html>
